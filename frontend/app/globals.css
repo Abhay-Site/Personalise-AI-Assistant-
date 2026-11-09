@@ -1,0 +1,28 @@
+/* globals.css — ORBIT 180 global styles */
+@import "tailwindcss";
+
+:root {
+  --orbit-bg: #0f1117;
+  --orbit-surface: #1a1d27;
+  --orbit-border: #2a2d3e;
+  --orbit-accent: #6366f1;
+  --orbit-accent-light: #818cf8;
+  --orbit-text: #e2e8f0;
+  --orbit-muted: #64748b;
+}
+
+body {
+  background-color: var(--orbit-bg);
+  color: var(--orbit-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--orbit-surface); }
+::-webkit-scrollbar-thumb { background: var(--orbit-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orbit-muted); }
+
+/* Smooth animations */
+* { transition-property: background-color, border-color, color, opacity;
+    transition-duration: 150ms; }

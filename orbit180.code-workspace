@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "Backend (FastAPI & AI)",
+      "path": "backend"
+    },
+    {
+      "name": "Frontend (Next.js & UI)",
+      "path": "frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.next": false,
+      "**/__pycache__": true
+    }
+  }
+}
