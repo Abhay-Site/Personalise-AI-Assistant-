@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     gemini_model: str = "gemini-3.8-flash"
 
     # ── Database ────────────────────────────────────────────────
-    database_url: str = "sqlite:///./orbit180.db"
+    database_url: str = "sqlite:///./personal_ai_assistant.db"
 
     # ── Server ──────────────────────────────────────────────────
     secret_key: str = "dev-secret-key-change-in-production"

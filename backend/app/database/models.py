@@ -5,7 +5,7 @@ Using classical Column() syntax instead of Mapped[] annotations for
 full compatibility with Python 3.14 and all SQLAlchemy 2.x versions.
 
 Google (Gmail, Calendar, Drive) remains the source of truth for live data.
-Only ORBIT 180's own state lives here.
+Only Personal AI Assistant's own state lives here.
 """
 
 from datetime import datetime, timezone

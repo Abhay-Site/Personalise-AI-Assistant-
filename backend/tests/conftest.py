@@ -2,7 +2,7 @@
 tests/conftest.py — Shared pytest fixtures
 
 Sets up a temporary SQLite database for testing so tests
-never touch the real orbit180.db file.
+never touch the real personal_ai_assistant.db file.
 """
 
 import pytest
@@ -14,7 +14,7 @@ from app.main import app
 from app.database.database import Base, get_db
 
 # Use an in-memory SQLite database for tests
-TEST_DATABASE_URL = "sqlite:///./test_orbit180.db"
+TEST_DATABASE_URL = "sqlite:///./test_personal_ai_assistant.db"
 
 test_engine = create_engine(TEST_DATABASE_URL, connect_args={"check_same_thread": False})
 TestSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=test_engine)

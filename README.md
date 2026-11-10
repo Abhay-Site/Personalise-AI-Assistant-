@@ -161,7 +161,7 @@ Personal-AI-Assistant/
 ├── .gitignore
 ├── README.md
 ├── start.bat
-└── orbit180.code-workspace
+└── Personal AI Assistant.code-workspace
 ```
 
 *Note: This is the planned documentation structure. Existing project folders and files should retain their actual names.*
@@ -233,7 +233,7 @@ GEMINI_MODEL=gemini-1.5-flash
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-DATABASE_URL=sqlite:///./orbit180.db
+DATABASE_URL=sqlite:///./personal_ai_assistant.db
 
 FRONTEND_URL=http://localhost:3000
 ```
