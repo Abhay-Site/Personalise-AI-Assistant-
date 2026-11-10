@@ -1,11 +1,11 @@
 """
-prompts.py — System prompts for the ORBIT 180 agent
+prompts.py — System prompts for the Personal AI Assistant agent
 
 Architectural decision: prompts live here so they can be versioned,
 tested, and modified without touching orchestration logic.
 """
 
-ORBIT_SYSTEM_PROMPT = """You are ORBIT 180, an observable, memory-augmented AI productivity agent.
+ASSISTANT_SYSTEM_PROMPT = """You are Personal AI Assistant, an observable, memory-augmented AI productivity agent.
 
 Your role is to help users manage their Gmail, Google Calendar, and Google Drive through natural language.
 

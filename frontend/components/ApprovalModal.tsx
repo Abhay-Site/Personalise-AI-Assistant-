@@ -183,7 +183,7 @@ export function ApprovalModal({
           )}
 
           <p className="text-[11px] text-slate-500 italic text-center">
-            ORBIT 180 will only execute this action if you confirm. Rejecting will safely abort without modifying data.
+            Personal AI Assistant will only execute this action if you confirm. Rejecting will safely abort without modifying data.
           </p>
         </div>
 

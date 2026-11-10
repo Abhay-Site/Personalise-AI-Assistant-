@@ -50,14 +50,14 @@ def test_workflow_context_chaining():
 def test_cross_app_master_demo_execution(client):
     """
     Tests the complete master demo:
-    'Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants'
+    'Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants'
     Verifies:
     1. Returns a 4-step action plan
     2. Chained email draft step contains the report and attendees
     3. Final send_email step requires human approval
     """
     response = client.post("/api/chat", json={
-        "message": "Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants"
+        "message": "Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants"
     })
     assert response.status_code == 200
     data = response.json()

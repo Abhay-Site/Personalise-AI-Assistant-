@@ -141,7 +141,7 @@ async def search_files(
     mock_files = [
         {
             "id": "demo_file_001",
-            "name": "ORBIT_180_Project_Report_Final.pdf",
+            "name": "Personal_AI_Assistant_Project_Report_Final.pdf",
             "mime_type": "application/pdf",
         },
         {

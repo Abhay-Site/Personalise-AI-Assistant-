@@ -29,7 +29,7 @@ async def lifespan(app: FastAPI):
     Replaces the deprecated @app.on_event("startup") pattern.
     """
     # ── Startup ───────────────────────────────────────────────
-    logger.info("ORBIT 180 backend starting up...")
+    logger.info("Personal AI Assistant backend starting up...")
     settings = get_settings()
 
     # Initialize database tables
@@ -46,18 +46,18 @@ async def lifespan(app: FastAPI):
     else:
         logger.info("Google OAuth not configured — running in mock auth mode (Phase 1).")
 
-    logger.info("ORBIT 180 backend ready.")
+    logger.info("Personal AI Assistant backend ready.")
     yield
 
     # ── Shutdown ──────────────────────────────────────────────
-    logger.info("ORBIT 180 backend shutting down.")
+    logger.info("Personal AI Assistant backend shutting down.")
 
 
 def create_app() -> FastAPI:
     settings = get_settings()
 
     app = FastAPI(
-        title="ORBIT 180 API",
+        title="Personal AI Assistant API",
         description="An Observable, Memory-Augmented Productivity Agent",
         version="0.1.0",
         lifespan=lifespan,
@@ -100,7 +100,7 @@ def create_app() -> FastAPI:
         settings = get_settings()
         return {
             "status": "ok",
-            "service": "ORBIT 180",
+            "service": "Personal AI Assistant",
             "version": "0.1.0",
             "gemini_configured": settings.gemini_configured,
             "gemini_model": settings.gemini_model if settings.gemini_configured else None,

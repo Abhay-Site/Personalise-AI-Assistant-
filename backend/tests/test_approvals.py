@@ -11,7 +11,7 @@ def test_sensitive_action_plan_stores_and_requires_approval(client):
     2. Save an action plan in the database with pending status
     """
     response = client.post("/api/chat", json={
-        "message": "Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants"
+        "message": "Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants"
     })
     assert response.status_code == 200
     data = response.json()

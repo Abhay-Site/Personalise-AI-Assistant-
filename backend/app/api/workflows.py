@@ -28,7 +28,7 @@ WORKFLOW_TEMPLATES = [
         "category": "cross-app",
         "icon": "🚀",
         "description": "Finds tomorrow's project review meeting, locates the latest report in Drive, and drafts an email with attendees.",
-        "prompt": "Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants",
+        "prompt": "Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants",
         "services": ["calendar", "drive", "gmail"],
     },
     {

@@ -1,27 +1,27 @@
-/* globals.css — ORBIT 180 global styles */
+/* globals.css — Personal AI Assistant global styles */
 @import "tailwindcss";
 
 :root {
-  --orbit-bg: #0f1117;
-  --orbit-surface: #1a1d27;
-  --orbit-border: #2a2d3e;
-  --orbit-accent: #6366f1;
-  --orbit-accent-light: #818cf8;
-  --orbit-text: #e2e8f0;
-  --orbit-muted: #64748b;
+  --assistant-bg: #0f1117;
+  --assistant-surface: #1a1d27;
+  --assistant-border: #2a2d3e;
+  --assistant-accent: #6366f1;
+  --assistant-accent-light: #818cf8;
+  --assistant-text: #e2e8f0;
+  --assistant-muted: #64748b;
 }
 
 body {
-  background-color: var(--orbit-bg);
-  color: var(--orbit-text);
+  background-color: var(--assistant-bg);
+  color: var(--assistant-text);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--orbit-surface); }
-::-webkit-scrollbar-thumb { background: var(--orbit-border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--orbit-muted); }
+::-webkit-scrollbar-track { background: var(--assistant-surface); }
+::-webkit-scrollbar-thumb { background: var(--assistant-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--assistant-muted); }
 
 /* Smooth animations */
 * { transition-property: background-color, border-color, color, opacity;

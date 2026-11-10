@@ -47,7 +47,7 @@ export default function WorkflowsPage() {
   function handleLaunchWorkflow(prompt: string) {
     // Navigate to chat with prompt pre-filled via sessionStorage or query
     if (typeof window !== 'undefined') {
-      sessionStorage.setItem('orbit_initial_prompt', prompt);
+      sessionStorage.setItem('assistant_initial_prompt', prompt);
     }
     router.push('/chat');
   }
@@ -115,7 +115,7 @@ export default function WorkflowsPage() {
 
         {history.length === 0 && !loading && (
           <div className="rounded-xl border border-slate-800 bg-[#141720] p-6 text-center text-slate-500 text-xs">
-            No workflows executed yet. Launch a workflow above or chat with ORBIT 180 to generate an action plan.
+            No workflows executed yet. Launch a workflow above or chat with Personal AI Assistant to generate an action plan.
           </div>
         )}
 

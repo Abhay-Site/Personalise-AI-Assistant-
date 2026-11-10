@@ -18,7 +18,7 @@ Flow:
 
 from typing import Any, Optional
 import google.generativeai as genai
-from app.agents.prompts import ORBIT_SYSTEM_PROMPT, build_context_prompt
+from app.agents.prompts import ASSISTANT_SYSTEM_PROMPT, build_context_prompt
 from app.agents.planner import build_plan_from_intent
 from app.agents.tool_registry import classify_tool, execute_tool
 from app.services.workflow_service import WorkflowContext
@@ -58,9 +58,9 @@ def _synthesize_local_response(
     if not action_plan:
         return (
             f"I understood: \"{user_message}\"\n\n"
-            "I'm ORBIT 180 — your observable, memory-augmented productivity agent. "
+            "I'm Personal AI Assistant — your observable, memory-augmented productivity agent. "
             "You can ask me to coordinate across Gmail, Google Calendar, and Drive!\n\n"
-            "Try: *\"Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants.\"*"
+            "Try: *\"Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants.\"*"
         )
 
     parts: list[str] = [f"I have created an action plan for: **{action_plan.goal}**\n"]
@@ -205,14 +205,14 @@ async def process_message(
                 time_max = end_date.strftime("%Y-%m-%dT%H:%M:%SZ")
                 base_args = {"time_min": time_min, "time_max": time_max, "max_results": 5}
             elif step.action == "search_files":
-                base_args = {"query": "ORBIT 180 report", "max_results": 5}
+                base_args = {"query": "Personal AI Assistant report", "max_results": 5}
             elif step.action == "create_draft":
                 import re
                 email_match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', user_message)
                 subj_match = re.search(r"subject\s*['\":]?\s*([^'\"]+?)(?:\s*(?:saying|body|with body|message|content)|\s*$)", user_message, re.IGNORECASE)
                 body_match = re.search(r"(?:saying|body|content|message)\s*['\":]?\s*(.+?)(?:['\"]\s*$|$)", user_message, re.IGNORECASE)
 
-                extracted_to = email_match.group(0) if email_match else "team@orbit180.dev"
+                extracted_to = email_match.group(0) if email_match else "team@assistant.dev"
 
                 if subj_match:
                     extracted_subj = subj_match.group(1).strip(" '\"")
@@ -234,7 +234,7 @@ async def process_message(
                         f"This is a confirmation that our meeting is scheduled for {day_str} at {time_str}.\n\n"
                         f"Please let me know if you need any further information beforehand.\n\n"
                         f"Best regards,\n"
-                        f"ORBIT 180"
+                        f"Personal AI Assistant"
                     )
                 else:
                     extracted_body = "Attached is the latest report for your review."
@@ -394,7 +394,7 @@ async def process_message(
             try:
                 model = genai.GenerativeModel(
                     model_name=m_name,
-                    system_instruction=ORBIT_SYSTEM_PROMPT,
+                    system_instruction=ASSISTANT_SYSTEM_PROMPT,
                 )
                 chat = model.start_chat(history=history)
                 response = chat.send_message(

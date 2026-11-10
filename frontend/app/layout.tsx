@@ -3,7 +3,7 @@ import './globals.css';
 import { Sidebar } from '@/components/Sidebar';
 
 export const metadata: Metadata = {
-  title: 'ORBIT 180 — AI Productivity Agent',
+  title: 'Personal AI Assistant — AI Productivity Agent',
   description: 'An observable, memory-augmented AI productivity agent for Gmail, Calendar, and Drive.',
 };
 

@@ -34,7 +34,7 @@ router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 # Demo / Local Mock User
 MOCK_USER_ID = "mock-google-id-12345"
-MOCK_USER_EMAIL = "demo@orbit180.dev"
+MOCK_USER_EMAIL = "demo@assistant.dev"
 MOCK_USER_NAME = "Demo User"
 
 

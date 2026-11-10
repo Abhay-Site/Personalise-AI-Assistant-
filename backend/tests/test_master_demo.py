@@ -1,7 +1,7 @@
 """
 tests/test_master_demo.py — End-to-End Master Demo Journey Test
 
-Tests the full lifecycle of ORBIT 180:
+Tests the full lifecycle of Personal AI Assistant:
 1. Health & system readiness
 2. Morning briefing retrieval
 3. Memory injection and persistence
@@ -34,7 +34,7 @@ def test_full_master_demo_journey(client):
 
     # ── Step 4: Execute Master Cross-App Prompt ───────────────
     master_prompt = (
-        "Find tomorrow's project review meeting, locate the latest ORBIT 180 report, "
+        "Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, "
         "and prepare an email for the participants"
     )
     chat_resp = client.post("/api/chat", json={"message": master_prompt})

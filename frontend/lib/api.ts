@@ -1,4 +1,4 @@
-// api.ts — Typed API client for the ORBIT 180 backend
+// api.ts — Typed API client for the Personal AI Assistant backend
 // All fetch calls go through this file so base URLs are centralised.
 
 import type {

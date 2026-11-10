@@ -7,7 +7,7 @@ def test_chat_creates_conversation(client):
     """
     Sending a message without a conversation_id should auto-create one.
     """
-    response = client.post("/api/chat", json={"message": "Hello ORBIT 180!"})
+    response = client.post("/api/chat", json={"message": "Hello Personal AI Assistant!"})
     assert response.status_code == 200
     data = response.json()
     assert "conversation_id" in data
@@ -93,7 +93,7 @@ def test_audit_log_created_after_chat(client):
 
 def test_chat_returns_integration_status(client):
     """Chat endpoint must report integration_status, model_name, and is_fallback."""
-    response = client.post("/api/chat", json={"message": "Hello ORBIT 180!"})
+    response = client.post("/api/chat", json={"message": "Hello Personal AI Assistant!"})
     assert response.status_code == 200
     data = response.json()
     assert "integration_status" in data

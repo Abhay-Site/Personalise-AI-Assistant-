@@ -214,7 +214,7 @@ class WorkflowContext:
                     lines.extend([
                         "",
                         "Best regards,",
-                        "ORBIT 180 Productivity Assistant",
+                        "Personal AI Assistant",
                     ])
 
                     args["body"] = "\n".join(lines)

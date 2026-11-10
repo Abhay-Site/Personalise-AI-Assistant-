@@ -45,7 +45,7 @@ class User(Base):
 # ─────────────────────────────────────────────────────────────
 
 class Conversation(Base):
-    """A named conversation thread between the user and ORBIT 180."""
+    """A named conversation thread between the user and Personal AI Assistant."""
     __tablename__ = "conversations"
 
     id = Column(Integer, primary_key=True, index=True)

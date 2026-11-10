@@ -1,6 +1,6 @@
 'use client';
 
-// Sidebar.tsx — Left navigation panel for ORBIT 180
+// Sidebar.tsx — Left navigation panel for Personal AI Assistant
 // Shows app logo, nav links, and current user profile with direct edit capability
 
 import { useState, useEffect } from 'react';
@@ -21,7 +21,7 @@ export function Sidebar() {
   const pathname = usePathname();
   const [user, setUser] = useState<{ name: string; email: string }>({
     name: 'Demo User',
-    email: 'demo@orbit180.dev',
+    email: 'demo@assistant.dev',
   });
   const [showModal, setShowModal] = useState(false);
   const [nameInput, setNameInput] = useState('');
@@ -87,11 +87,11 @@ export function Sidebar() {
         <div className="px-5 py-5 border-b border-slate-800">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">
-              O
+              P
             </div>
             <div>
-              <p className="text-white font-bold text-sm leading-none">ORBIT 180</p>
-              <p className="text-slate-500 text-[10px] mt-0.5">AI Productivity Agent</p>
+              <p className="text-white font-bold text-sm leading-none">Personal AI</p>
+              <p className="text-slate-500 text-[10px] mt-0.5">Assistant Agent</p>
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@ export function Sidebar() {
             </div>
 
             <p className="text-slate-400 text-xs">
-              Personalize ORBIT 180 with your own name and email address:
+              Personalize Personal AI Assistant with your own name and email address:
             </p>
 
             <form onSubmit={handleSaveProfile} className="space-y-3">

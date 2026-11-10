@@ -12,7 +12,7 @@ def test_db_creates_user(client):
     response = client.get("/api/auth/me")
     assert response.status_code == 200
     data = response.json()
-    assert data["email"] == "demo@orbit180.dev"
+    assert data["email"] == "demo@assistant.dev"
     assert data["name"] == "Demo User"
     assert "id" in data
 

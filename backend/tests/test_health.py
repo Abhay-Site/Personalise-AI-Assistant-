@@ -14,7 +14,7 @@ def test_health_response_structure(client):
     response = client.get("/health")
     data = response.json()
     assert data["status"] == "ok"
-    assert data["service"] == "ORBIT 180"
+    assert data["service"] == "Personal AI Assistant"
     assert "gemini_configured" in data
     assert "google_oauth_configured" in data
 

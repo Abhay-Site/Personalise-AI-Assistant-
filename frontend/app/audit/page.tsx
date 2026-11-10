@@ -74,7 +74,7 @@ export default function AuditPage() {
             📋 Action Audit Log
           </h1>
           <p className="text-slate-400 text-sm mt-1">
-            Complete, immutable trail of all operations executed by ORBIT 180.
+            Complete, immutable trail of all operations executed by Personal AI Assistant.
           </p>
         </div>
 

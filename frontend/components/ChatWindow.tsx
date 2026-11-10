@@ -33,9 +33,9 @@ export function ChatWindow() {
   // Check for pre-selected workflow launch from Workflows page
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const initialPrompt = sessionStorage.getItem('orbit_initial_prompt');
+      const initialPrompt = sessionStorage.getItem('assistant_initial_prompt');
       if (initialPrompt) {
-        sessionStorage.removeItem('orbit_initial_prompt');
+        sessionStorage.removeItem('assistant_initial_prompt');
         sendMessage(initialPrompt);
       }
     }
@@ -167,7 +167,7 @@ export function ChatWindow() {
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center py-12">
             <div className="text-5xl mb-4">🤖</div>
-            <h2 className="text-xl font-semibold text-white mb-2">ORBIT 180 is ready</h2>
+            <h2 className="text-xl font-semibold text-white mb-2">Personal AI Assistant is ready</h2>
             <p className="text-slate-400 text-sm max-w-sm mb-8">
               Ask me anything about your Gmail, Calendar, or Drive — or try one of these:
             </p>

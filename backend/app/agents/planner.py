@@ -43,7 +43,7 @@ DRIVE_KEYWORDS = [
     "report", "reports", "file", "files", "drive", "document", "documents",
     "doc", "docs", "notes", "pdf", "pdfs", "slides", "presentation", "deck",
     "spreadsheet", "spreadsheets", "sheet", "sheets", "excel", "syllabus",
-    "paper", "manuscript", "homework", "lab manual", "folder", "orbit 180"
+    "paper", "manuscript", "homework", "lab manual", "folder", "personal ai assistant"
 ]
 
 DRIVE_PHRASES = [
@@ -144,7 +144,7 @@ def plan_from_semantic_rules(message: str) -> Optional[ActionPlanSchema]:
         )
 
     # 1. Primary Cross-App Workflow (The Master Demo)
-    # "Find tomorrow's project review meeting, locate the latest ORBIT 180 report, and prepare an email for the participants"
+    # "Find tomorrow's project review meeting, locate the latest Personal AI Assistant report, and prepare an email for the participants"
     has_calendar = matches_calendar(msg)
     has_drive = matches_drive(msg)
     has_email = matches_email(msg)
@@ -335,7 +335,7 @@ async def plan_with_gemini(message: str) -> Optional[ActionPlanSchema]:
         return None
 
     planner_prompt = (
-        "You are an AI planner for ORBIT 180, an agent connected to Google Calendar, Google Drive, and Gmail.\n"
+        "You are an AI planner for Personal AI Assistant, an agent connected to Google Calendar, Google Drive, and Gmail.\n"
         "Available actions:\n"
         "- calendar: list_events (read), find_free_time (read), create_event (write), delete_event (sensitive)\n"
         "- drive: search_files (read), get_file_metadata (read), create_file (write), delete_file (sensitive)\n"

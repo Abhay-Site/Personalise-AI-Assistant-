@@ -75,7 +75,7 @@ async def test_gmail_tools_standalone():
     assert search_res["status"] in ["connected", "demo"]
 
     # 2. Create Draft
-    draft_res = await gmail.create_draft(to="alice@orbit180.dev", subject="Test", body="Hello")
+    draft_res = await gmail.create_draft(to="alice@assistant.dev", subject="Test", body="Hello")
     assert "draft_id" in draft_res
     assert draft_res["status"] in ["connected", "demo"]
     created_draft_id = draft_res["draft_id"]

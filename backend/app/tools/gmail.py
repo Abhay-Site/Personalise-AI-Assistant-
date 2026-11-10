@@ -117,7 +117,7 @@ async def get_email(email_id: str, credentials=None) -> dict[str, Any]:
         "id": email_id,
         "subject": "Project Review Meeting Details",
         "from": "dr.smith@university.edu",
-        "snippet": "Looking forward to reviewing the ORBIT 180 architecture and results.",
+        "snippet": "Looking forward to reviewing the Personal AI Assistant architecture and results.",
     }
 
 
@@ -253,9 +253,9 @@ async def send_email(
 
         settings = get_settings()
         if settings.smtp_email and settings.smtp_password:
-            to_addr = staged_draft.get("to", "team@orbit180.dev")
-            subj = staged_draft.get("subject", "Message from ORBIT 180")
-            content = staged_draft.get("body", "Hello from ORBIT 180")
+            to_addr = staged_draft.get("to", "team@assistant.dev")
+            subj = staged_draft.get("subject", "Message from Personal AI Assistant")
+            content = staged_draft.get("body", "Hello from Personal AI Assistant")
 
             msg = MIMEMultipart()
             msg["From"] = settings.smtp_email

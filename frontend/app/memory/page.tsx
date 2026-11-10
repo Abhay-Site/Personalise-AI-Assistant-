@@ -55,7 +55,7 @@ export default function MemoryPage() {
         <div>
           <h1 className="text-2xl font-bold text-white">🧠 Memory</h1>
           <p className="text-slate-400 text-sm mt-1">
-            Saved preferences that ORBIT 180 uses when planning actions
+            Saved preferences that Personal AI Assistant uses when planning actions
           </p>
         </div>
         <button
