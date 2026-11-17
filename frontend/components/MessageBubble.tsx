@@ -75,7 +75,7 @@ export function MessageBubble({ message }: Props) {
       {/* Role and Model Integration label */}
       <div className="flex items-center gap-2 px-1 flex-wrap">
         <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">
-          {isUser ? 'You' : '🤖 ORBIT 180'}
+          {isUser ? 'You' : '🤖 Personal AI Assistant'}
         </span>
         {!isUser && message.model_name && !message.is_fallback && (
           <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-medium flex items-center gap-1 shadow-sm">

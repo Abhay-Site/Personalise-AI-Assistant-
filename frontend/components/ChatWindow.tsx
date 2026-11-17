@@ -192,7 +192,7 @@ export function ChatWindow() {
         {/* Loading indicator */}
         {loading && (
           <div className="flex items-start gap-2">
-            <span className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">🤖 ORBIT 180</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">🤖 Personal AI Assistant</span>
             <div className="bg-[#1e2130] border border-slate-700 rounded-2xl rounded-tl-none px-4 py-3">
               <div className="flex gap-1.5 items-center">
                 <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce [animation-delay:0ms]" />
@@ -221,7 +221,7 @@ export function ChatWindow() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask ORBIT 180... (Enter to send, Shift+Enter for new line)"
+            placeholder="Ask Personal AI Assistant... (Enter to send, Shift+Enter for new line)"
             rows={1}
             className="flex-1 bg-transparent text-slate-200 placeholder-slate-600 text-sm resize-none outline-none leading-relaxed max-h-32 overflow-y-auto"
             style={{ height: 'auto' }}
@@ -240,7 +240,7 @@ export function ChatWindow() {
           </button>
         </div>
         <p className="text-[10px] text-slate-600 mt-2 text-center">
-          ORBIT 180 can make mistakes. Review sensitive actions before approving.
+          Personal AI Assistant can make mistakes. Review sensitive actions before approving.
         </p>
       </div>
     </div>
